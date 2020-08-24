@@ -85,6 +85,49 @@ app.post('/teams', (request, response) => {
     return response.json({newTeam, message: "New Teams Create Sucess!" });
 });
 
+app.put('/teams/:id', (request, response) => {
+    //capturo a ID para saber qual registro vou atualizar
+    const { id } = request.params;
+
+    //pego os novos dados la do frontend
+    const {  
+        name, 
+        logo,
+        president,
+        director,
+        techical_manager,
+        engine,
+        tyres
+    } = request.body;
+
+    //procurar a equipe na lista "teams"
+    const teamIndex = teams.findIndex(team => team.id == id);
+
+    //verifico se a equipe(team) foi ou não encontrada
+    if(teamIndex < 0){
+        //caso não exita uma equipe retorno um erro
+        return response.status(400).json({ error: "Teams not found!" });
+    }
+
+    //crio uma variavel com os dados da equipe que vão ser atualizados
+    const teamForUpdate = { 
+        id, //squi vem do request.params
+        name, 
+        logo,
+        president,
+        director,
+        techical_manager,
+        engine,
+        tyres
+    };
+
+    //seleciono a equipe na lista e atualizo seus dados
+    teams[teamIndex] = teamForUpdate; 
+
+    //retorno a equipe atualizada junto com uma mensagem de sucesso
+    return response.json({teamForUpdate, message: "Teams Update Sucess!" });
+});
+
 //Pilotos
 app.get('/drivres', (request, response) => {
     return response.json({drives: 'Pilotos'});
