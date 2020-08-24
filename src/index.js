@@ -128,6 +128,26 @@ app.put('/teams/:id', (request, response) => {
     return response.json({teamForUpdate, message: "Teams Update Sucess!" });
 });
 
+app.delete('/teams/:id', (request, response) => {
+    const { id } = request.params;
+
+    //procura na lista de TEAMS o index do team que vai ser apagado
+    const teamIndex = teams.findIndex(team => team.id == id);
+
+    //verifico se o Team foi ou não encontrado
+    if(teamIndex < 0){
+        //se o team não foi encontrado retorno um erro com STATUS 400
+        return response.status(400).json({ error: "Teams not found!" });
+    }
+
+    //removo o team da lista de temas
+    teams.splice(teamIndex, 1);
+
+    //retorno uma mensagem vazia com STATUS 204
+    return response.status(204).send();
+});
+
+
 //Pilotos
 app.get('/drivres', (request, response) => {
     return response.json({drives: 'Pilotos'});
