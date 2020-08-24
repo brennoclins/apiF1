@@ -5,6 +5,7 @@
   "author": "Brenno C. Lins <dev@bcl-st.com.br>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uuidv4": "^6.2.3"
   }
 }
