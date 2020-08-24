@@ -4,7 +4,7 @@ const app = express();
 
 
 app.get('/teams', (request, response) => {
-    return response.send("apiF1 OK")
+    return response.send("apiF1 OK2")
 });
 
 
