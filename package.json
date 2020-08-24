@@ -1,0 +1,10 @@
+{
+  "name": "apiF1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Brenno C. Lins <dev@bcl-st.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
