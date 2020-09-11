@@ -1,5 +1,5 @@
 <h4 align="center">
-    <img src="./BCL-ST_1900x800.png" width="450px" /><br>
+    <img src="./public/imgs/f1.png" width="450px" /><br>
     <b>Formular 1 API 2020! 😍</b>
 </h4>
 <p align="center">
