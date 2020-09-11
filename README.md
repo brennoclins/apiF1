@@ -54,12 +54,10 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 No modulo-1 do curso <b>GoStack Bootcamp</b> na [Rocketseat](https://rocketseat.com.br/)
 
+---
 
 ### Link
 
 - [BCL-ST](https://www.bcl-st.com.br)
 
----
-
-Feito com 😍 Brenno C. Lins
 
