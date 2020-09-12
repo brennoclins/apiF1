@@ -7,9 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-//meu banco de dados, agora vai iniciar como um array vazio
 const teams = [
-    /*{
+    {
         "id": 1,
 		"name":"Red Bull Racing",
 		"logo":"https://media.api-sports.io/formula-1/teams/1.png",
@@ -38,7 +37,7 @@ const teams = [
         "technical_manager": "James Allison",
         "engine":"Mercedes V6 turbo hybride",
         "tyres":"Pirelli"
-    }*/
+    }
 ];
 
 app.get('/teams', (request, response) => {
