@@ -1,8 +1,10 @@
 const express = require('express');
-const { uuid } = require('uuidv4')
+const { uuid } = require('uuidv4');
+const cors = require('cors');
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 //meu banco de dados, agora vai iniciar como um array vazio
